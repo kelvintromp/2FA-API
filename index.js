@@ -8,25 +8,6 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 
 const app = express(); // creates an express application
 
-// LOCAL STORAGE; to store temporary secrets in
-const JsonDB = require('node-json-db').JsonDB; // a simple "database" that use JSON file for Node.JS
-const Config = require('node-json-db/dist/lib/JsonDBConfig').Config;
-
-/**
- * Creates a node-json-db database config
- * @param {string} name - name of the JSON storage file
- * @param {boolean} Tells it to save on each push otherwise the save() method has to be called.
- * @param {boolean} Instructs JsonDB to save the database in human readable format
- * @param {string} separator - the separator to use when accessing database values
- */
-const dbConfig = new Config("myDataBase", true, false, '/')
-
-/**
- * Creates a Node-json-db JSON storage file
- * @param {instance} dbConfig - Node-json-db configuration
- */
-const db = new JsonDB(dbConfig);
-
 // SET CORS
 app.use(function(req, res, next) {
 	res.header("Access-Control-Allow-Origin", "http://localhost:4200");
