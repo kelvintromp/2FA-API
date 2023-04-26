@@ -4,7 +4,7 @@ The 2FA API uses 4 modules:<br />
 Express: Node.js web application server framework.<br />
 Body-parser: middleware that parses the JSON, buffer, string, and URL encoded data of incoming HTTP POST requests and exposes them as req.body before they reach handlers.<br />
 Speakeasy: Secret and one-time passcode (OTP) token validator for two-factor authentication.<br />
-Fetch: By default, node doesn't have fetch, which is used for requests to the database API.
+Fetch: By default, node doesn't have fetch, which is used for requests to a database API.
 
 The 2FA API listens on multiple routes for client POST requests. POST is deliberately chosen as it is a little safer than GET because the parameters are not stored in browser history or in web server logs, nor is any data parsed along in the URL. Which makes it preferable for requests involving sensitive information.
 
