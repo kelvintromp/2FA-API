@@ -1,5 +1,7 @@
 # 2FA-API
 
+This API was made to be the bridge for 2FA between a login system made in Angular and a Python API handling database requests.
+
 The 2FA API uses 4 modules:<br />
 Express: Node.js web application server framework.<br />
 Body-parser: middleware that parses the JSON, buffer, string, and URL encoded data of incoming HTTP POST requests and exposes them as req.body before they reach handlers.<br />
