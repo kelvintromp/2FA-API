@@ -1,6 +1,6 @@
 # 2FA-API
 
-This API was made to be the bridge for 2FA between a login system made in Angular and a Python API handling database requests.
+This API was made to be the bridge for 2FA between the login of a webapp and an API handling database requests.
 
 The 2FA API uses 4 modules:<br />
 Express: Node.js web application server framework.<br />
