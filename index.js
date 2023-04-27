@@ -1,3 +1,6 @@
+// == 2FA API ==
+// This API was made to be the bridge for 2FA between the login of a webapp and an API handling database requests.
+
 // connect with the required modules for the 2FA API
 const express = require("express"); // Node.js web application server framework
 const bodyParser = require('body-parser'); // middleware that parses the JSON, buffer, string, and URL encoded data of incoming HTTP POST requests and exposes them as req.body before they reach handlers
