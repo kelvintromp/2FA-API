@@ -1,3 +1,5 @@
+// based on: https://blog.logrocket.com/implementing-two-factor-authentication-using-speakeasy/
+
 // connect with the required modules for the 2FA API
 const express = require("express"); // Node.js web application server framework
 const bodyParser = require('body-parser'); // middleware that parses the JSON, buffer, string, and URL encoded data of incoming HTTP POST requests and exposes them as req.body before they reach handlers
@@ -78,7 +80,7 @@ app.post("/api/verify", (req,res) => { // listen on /api/verify route for POST r
 		console.log(verified);
 
 		if (verified) { // if verified is true
-			fetch("http://localhost:5000/auth", { // send secret to database api to be stored in database
+			fetch("http://localhost:5000/auth", { // send secret to database API to be stored in database
 				method: "POST", // we're sending sensitive data, so we're using the POST method with a body
 				headers: {
 					'Accept': 'application/json', // we only accept JSON data as response
@@ -113,7 +115,7 @@ app.post("/api/validate", (req,res) => { // listen on /api/validate route for PO
 	console.log(req.body);
 
 	try {
-		fetch("http://localhost:5000/auth/get", { // send secret to database api to be stored in database
+		fetch("http://localhost:5000/auth/get", { // send secret to database API to be stored in database
 			method: "POST", // we're sending sensitive data, so we're using the POST method with a body
 			headers: {
 				'Accept': 'application/json', // we only accept JSON data as response
